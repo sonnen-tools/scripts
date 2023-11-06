@@ -13,6 +13,8 @@ It calls the SonnenBatterie's internal API to charge it (regardless where the po
 
 It needs the SonnenBatterie's IP Address (NOT the SonnenCloud, it directly calls the SonnenBatterie) and the API Token (that you can find on the "Software Integration" page of your SB)
 
+![SonnenBatterie JSON API page](./images/sb-json-api.png)
+
 ### Setup
 
 You can set the IP and Token via environment variables:
