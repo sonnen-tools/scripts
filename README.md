@@ -24,6 +24,31 @@ This is based on the work that [GrimmiMeloni](https://github.com/GrimmiMeloni) d
 
 > __I hereby summon the Power of Open Source__ *__bzzzt__* - he shared his work on GitHub, so I could learn from that and then adapted it to the Sonnenbatterie use case - which is simpler, but different. __Thank you!!__)
 
+
+#### Prerequisites
+The script uses the `jq` and `curl` tools. It checks for their installation, and will not continue without them.
+Check if you have installed them (or install them on your Pi) using:
+`sudo apt-get install jq` and `sudo apt-get install curl`, respectively:
+
+```
+mnagel@evcc:~ $ sudo apt-get install jq
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+jq is already the newest version (1.6-2.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+
+mnagel@evcc:~ $ sudo apt-get install curl
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.74.0-1.3+deb11u11).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+```
+
+
 ### Configuration
 
 1) Download the `sb-control.sh` script [from here](./evcc/sb-control.sh) and store it on your Raspberry (whereever you run evcc) 
