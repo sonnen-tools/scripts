@@ -2,6 +2,31 @@
 
 ## evcc.io Sonnenbatterie discharge control
 
+### _DEPRECATED_  
+ From version 0.124.1 evcc supports battery discharge control for SonnenBatterie out-of-the-box   
+ see https://github.com/evcc-io/evcc/releases/tag/0.124.1  
+ https://docs.evcc.io/docs/devices/meters#sonnenbatterie   
+
+Just add your SB API token under the "meters" - usage "battery" settings as shown in the documentation (see link above). 
+
+```
+meters:
+  - name: my_battery
+    type: template
+    template: sonnenbatterie
+    usage: battery
+    host: 192.0.2.2 # IP address or hostname
+    port: 8080 # Port (optional)
+    token: # API Token (required for active battery control) (optional) 
+```
+
+![](./images/evcc_battery_control.png)
+
+
+
+
+--------------------------------------------------------------------------
+
 A common problem for home battery users (especially with AC-connected batteries that don't have a tight integration with an inverter or Wallbox/Charger) is that any consumption that exceeds the PV production will be supported by the battery. As a result - whenever you charge your car, the battery will be "sucked empty" (_imitate *slurping* noise here_) in no time.
 
 The [evcc.io](https://evcc.io/) team is currently working on supporting especially hybrid inverters (with their attached batteries) but it might take a while until there is time to look into the Sonnenbatterie.
